@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RockPaperScissorsGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가위바위보 게임을 시작합시다!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Laa-U6-w1k">
+                                <rect key="frame" x="30" y="213" width="333" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="결과는?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQb-02-LG6">
+                                <rect key="frame" x="30" y="469" width="333" height="34.666666666666686"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="85" translatesAutoresizingMaskIntoConstraints="NO" id="6KJ-VK-kjf">
+                                <rect key="frame" x="30" y="633.66666666666663" width="333" height="34.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZR1-NO-Y1O">
+                                        <rect key="frame" x="0.0" y="0.0" width="54.333333333333336" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="가위"/>
+                                        <connections>
+                                            <action selector="userChoiceSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YTP-Ln-jkA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXo-7f-4WG">
+                                        <rect key="frame" x="139.33333333333334" y="0.0" width="54.333333333333343" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="바위"/>
+                                        <connections>
+                                            <action selector="userChoiceSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HLL-fk-WiA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N45-Gt-yqh">
+                                        <rect key="frame" x="278.66666666666669" y="0.0" width="54.333333333333314" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="보"/>
+                                        <connections>
+                                            <action selector="userChoiceSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Psp-Qs-iGF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="N45-Gt-yqh" firstAttribute="top" secondItem="6KJ-VK-kjf" secondAttribute="top" id="9R5-s8-cus"/>
+                                    <constraint firstItem="N45-Gt-yqh" firstAttribute="leading" secondItem="RXo-7f-4WG" secondAttribute="trailing" constant="85" id="AUp-MI-nZa"/>
+                                    <constraint firstItem="RXo-7f-4WG" firstAttribute="leading" secondItem="ZR1-NO-Y1O" secondAttribute="trailing" constant="85" id="HHJ-0N-PQo"/>
+                                    <constraint firstItem="ZR1-NO-Y1O" firstAttribute="top" secondItem="6KJ-VK-kjf" secondAttribute="top" id="HhS-7d-RrN"/>
+                                    <constraint firstItem="N45-Gt-yqh" firstAttribute="leading" secondItem="RXo-7f-4WG" secondAttribute="trailing" constant="85" id="IGm-je-cbP"/>
+                                    <constraint firstAttribute="bottom" secondItem="N45-Gt-yqh" secondAttribute="bottom" id="LKO-C8-zTg"/>
+                                    <constraint firstAttribute="bottom" secondItem="RXo-7f-4WG" secondAttribute="bottom" id="MNh-op-4M8"/>
+                                    <constraint firstItem="RXo-7f-4WG" firstAttribute="leading" secondItem="ZR1-NO-Y1O" secondAttribute="trailing" constant="85" id="W4V-TX-eRt"/>
+                                    <constraint firstItem="ZR1-NO-Y1O" firstAttribute="leading" secondItem="6KJ-VK-kjf" secondAttribute="leading" id="gXV-K8-PyD"/>
+                                    <constraint firstAttribute="trailing" secondItem="N45-Gt-yqh" secondAttribute="trailing" id="hYo-dF-Bgq"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZR1-NO-Y1O" secondAttribute="bottom" id="iEp-qG-Jc3"/>
+                                    <constraint firstItem="RXo-7f-4WG" firstAttribute="top" secondItem="6KJ-VK-kjf" secondAttribute="top" id="x2L-gc-lzC"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS가 낸 것 : " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sB-4G-8sW">
+                                <rect key="frame" x="30" y="311" width="333" height="27.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0be-NY-mJ7">
+                                <rect key="frame" x="104" y="87.666666666666629" width="184" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <imageReference key="image" image="poweroutlet.type.m.fill" catalog="system" renderingMode="original"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6KJ-VK-kjf" firstAttribute="top" secondItem="Laa-U6-w1k" secondAttribute="bottom" constant="390.66666666666663" id="4VT-Sc-etS"/>
+                            <constraint firstItem="3sB-4G-8sW" firstAttribute="top" secondItem="Laa-U6-w1k" secondAttribute="bottom" constant="68" id="62X-2M-8KO"/>
+                            <constraint firstItem="WQb-02-LG6" firstAttribute="leading" secondItem="6KJ-VK-kjf" secondAttribute="trailing" constant="-333" id="B7z-DA-I6A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Laa-U6-w1k" secondAttribute="trailing" constant="30" id="Euh-dl-xoc"/>
+                            <constraint firstItem="3sB-4G-8sW" firstAttribute="leading" secondItem="6KJ-VK-kjf" secondAttribute="leading" id="H74-4d-3Oh"/>
+                            <constraint firstItem="6KJ-VK-kjf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="KiQ-2Q-STh"/>
+                            <constraint firstItem="Laa-U6-w1k" firstAttribute="trailing" secondItem="6KJ-VK-kjf" secondAttribute="trailing" id="U7X-Rn-zLc"/>
+                            <constraint firstItem="Laa-U6-w1k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="aAx-g6-Ahm"/>
+                            <constraint firstItem="Laa-U6-w1k" firstAttribute="leading" secondItem="6KJ-VK-kjf" secondAttribute="leading" id="cJ3-vi-Xrj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6KJ-VK-kjf" secondAttribute="trailing" constant="30" id="gWe-3g-ahu"/>
+                            <constraint firstItem="6KJ-VK-kjf" firstAttribute="top" secondItem="WQb-02-LG6" secondAttribute="bottom" constant="130" id="nzL-dh-LfV"/>
+                            <constraint firstItem="3sB-4G-8sW" firstAttribute="trailing" secondItem="6KJ-VK-kjf" secondAttribute="trailing" id="p8k-C2-Meu"/>
+                            <constraint firstItem="WQb-02-LG6" firstAttribute="trailing" secondItem="6KJ-VK-kjf" secondAttribute="trailing" id="qGx-5k-mdD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6KJ-VK-kjf" secondAttribute="bottom" constant="150" id="tYo-m6-hdc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="iOSChoiceLabel" destination="3sB-4G-8sW" id="L8R-fb-3OV"/>
+                        <outlet property="resultLabel" destination="WQb-02-LG6" id="noM-KR-Ixy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38.931297709923662" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="poweroutlet.type.m.fill" catalog="system" width="128" height="110"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
